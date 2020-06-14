@@ -1,5 +1,5 @@
-let myKey2 = "?api_key=a6ece6ac-e3b8-4849-a699-f9497aa4991e";
-let myKey = '?api_key=226c5472-44d6-4e27-afb5-4070724aba91';
+const myKey2 = "?api_key=a6ece6ac-e3b8-4849-a699-f9497aa4991e";
+const myKey = '?api_key=226c5472-44d6-4e27-afb5-4070724aba91';
 
 const getShows = () => {
     axios.get('https://project-1-api.herokuapp.com/showdates'+myKey)
@@ -9,7 +9,6 @@ const getShows = () => {
                 let param = res.data[i]
                 parseShows(param)
                 // console.log(param.place);
-
             }
         })    
 }
