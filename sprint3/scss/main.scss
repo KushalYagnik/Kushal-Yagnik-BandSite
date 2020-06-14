@@ -145,7 +145,6 @@ img{
         flex-flow: column nowrap;
         &__heading{
             padding: 1rem;
-            // font-size: 2em;
         }
         &__container{
             margin: 1em;
@@ -158,11 +157,7 @@ img{
         }
         &__pic-wrapper{
             width: 30%;
-            // width: 2em;
-            // height: 2em;
-            // padding: 1em;
-            // border-radius: 50%;
-            // background-color: darkgray;
+
         }
         &__pic{
             background-color: darkgrey;
@@ -174,13 +169,8 @@ img{
         }
         &__block{
             width: 100%;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-around;
-            // padding-left: 1em;
         }
         &__bio{
-            // width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -195,22 +185,47 @@ img{
             padding-top: 1em;
             font-size: 1em;
         }
+        &__handles{
+            display: flex;
+            margin: 1em 0;
+        }
+        &__delete{
+            color: #FAFAFA;
+            background-color: #323232;
+            border-radius: 3px;
+            border: none;
+            margin-right: 5em;
+            padding: 0 2em;
+            font-family: myfont;
+        }
+        &__like{
+            color: #FAFAFA;
+            background-color: #323232;
+            border-radius: 3px;
+            padding: 0 1em;
+            margin-right: -10px;
+            border: none;
+        }
+        &__counter{
+            color: #FAFAFA;
+            background-color: #323232;
+            text-align: center;;
+            height: 1em;
+            width: 1em;
+            border-radius: 3px;
+            padding: 10px;
+        }
     }
     
     .form{
         margin: 1em;
         display: flex;
-        // justify-content: space-evenly;
-        &__lbl{
-            // margin-bottom: 1em;
-        }
         &__img-wrapper{
             width: 30%;
         }
         &__name-wrapper{
             display: flex;
             flex-flow: column nowrap;
-            // align-items: flex-end;
         }
         &__comment-wrapper{
             display: flex;
@@ -226,17 +241,12 @@ img{
             width: 100%;
             display: flex;
             flex-flow: column nowrap;
-            // text-align: right;
-            // margin-left: 1em;
         }
         &__name{
             border: 2px solid black;
             border-radius: 3px;
-            // padding: 0 1em;
             padding-left: 1em;
             height: 3em;
-            // width: 100%;
-            // overflow: hidden;
             margin-bottom: 2em;
             &::placeholder{
                 font-family: myfont;
@@ -244,7 +254,6 @@ img{
         }
         &__comment{
             height: 7em;
-            // width: 100%;
             margin-bottom: 2em;
             border: 2px solid silver;
             border-radius: 3px;
@@ -254,7 +263,6 @@ img{
             }
         }
         &__submit{
-            // height: 10em;
             align-self: flex-end;
         }
     }
@@ -262,11 +270,9 @@ img{
 }
 
 .main__shows{
-    // padding: 2em;
     .showshero{
         padding: 1em;
         height: 30em;
-        // width: 100%;
         opacity: 0.95;
         background-image: url(../assets/hero/steve-johnson-d7JWDqIhfF4-unsplash.jpg);
         display: flex;
@@ -287,7 +293,6 @@ img{
             font-size: 2em;
         }
         &__unit{
-            // border: 1px solid greenyellow;
             margin: 2em 0;
             label{
                 color: darkgray;
@@ -361,7 +366,7 @@ img{
     }
 }
 
-@media (min-width: $tablet-breakpoint){
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint){
     .btn{
         width: 10em;
     }
@@ -436,20 +441,10 @@ img{
         }
         .form{
             margin: 2em 8em;
-            // width: 50%;
         }
         .comments__container{
             margin: 2em 8em;
         }
-        // .comments{
-        //     &__bio{
-        //         justify-content: flex-start;
-        //         align-items: center;
-        //     }
-        //     &__date{
-        //         padding: 0 1em;
-        //     }
-        // }
     }
     .main__shows{
         .showshero{
@@ -481,10 +476,6 @@ img{
                 visibility: visible;
                 display: flex;
                 margin: 2em 0;
-                // h3{
-                //     padding: 0 3.2em;
-                //     color: silver;
-                // }
             }
             &__heading{
                 font-size: 2em;
@@ -638,29 +629,10 @@ img{
         }
         .form{
             margin: 2em 20em;
-            // &__heading{
-            //     padding: 2em 5em ;
-            // }
         }
         .comments{
             margin: 2em 11.25em;
         }
-        // .comments__container{
-        //     margin: 2em 20em;
-        // }
-        // .comments__heading{
-        //     margin: 2em 4em;
-        // }
-        // .comments{
-        //     margin: 2em 15em;
-        //     &__bio{
-        //         justify-content: flex-start;
-        //         align-items: center;
-        //     }
-        //     &__date{
-        //         padding: 0 1em;
-        //     }
-        // }
     }
     .main__shows{
         .showshero{
@@ -692,22 +664,15 @@ img{
                 visibility: hidden;
             }
             &__header{
-                // border: 2px solid gold;
                 visibility: visible;
                 display: flex;
                 justify-content: space-between;
-                // &:not(:nth-child(3n-1)){
-                //     justify-content: flex-end;                    
-                // }
-                // margin: 2em 0;
                 &-list{
                     list-style-type: none;
                     display: flex;
                     justify-content: flex-end;                
                 }
                 &-item{
-                    // border: 2px solid silver;
-                    // padding-right: 12em;
                     width: 10rem;
                     margin: 1em 8em 1em 2em;
                     font-size: larger;                         
@@ -718,9 +683,6 @@ img{
                 padding: 1em 3em;
             }
             &__unit{
-                
-                // margin: 1em 0;
-                // padding: 2em 0;
                 width: 100%;
                 display: flex;
                 flex-wrap: nowrap;
@@ -729,27 +691,8 @@ img{
                 border-bottom: 2px solid silver;
             }  
             &__align{
-                // border: 1px solid black;
                 width: 20rem;
-            } 
-            // &__date{
-            //     font-size: 15px;
-            //     color: #323232;
-            //     padding-bottom: 1em;
-            // }
-            // &__venue{
-            //     font-size: 14px;
-            //     color: #323232;
-            //     padding-bottom: 1em;
-            // }
-            // &__location{
-            //     font-size: 14px;
-            //     color: #323232;
-            //     padding-bottom: 1em;
-            // }
-            // &__tickets{
-            //     margin-left: 2em;
-            // }
+            }
         }
     }
     .footer{

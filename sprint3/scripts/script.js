@@ -71,22 +71,28 @@ const parseComments = (param) => {
     comment.innerText = `${param.comment}`;
     block.appendChild(comment);
 
-    let likes = document.createElement('p');
-    likes.className = 'comments__counter';
-    likes.innerText = `${param.likes}`;
-    commentsUnit.appendChild(likes);
+    let commentHandles = document.createElement('div');
+    commentHandles.className = 'comments__handles'
+    block.appendChild(commentHandles);
 
     let del = document.createElement('button');
     del.className = 'comments__delete';
     del.setAttribute('value',param.id);
     del.innerText = 'Delete';
-    commentsUnit.appendChild(del);
+    commentHandles.appendChild(del);
+    // commentsUnit.appendChild(del);
 
     let like = document.createElement('button');
-    like.className = 'comments__like';
+    like.className = 'comments__like  fa fa-thumbs-up';
     like.setAttribute('value',param.id);
-    like.innerText = 'Like';
-    commentsUnit.appendChild(like);
+    // like.innerText = '  Like';
+    commentHandles.appendChild(like);
+
+    let likes = document.createElement('p');
+    likes.className = 'comments__counter';
+    likes.innerText = `${param.likes}`;
+    commentHandles.appendChild(likes);
+    
 
     container.prepend(commentsUnit);
 
