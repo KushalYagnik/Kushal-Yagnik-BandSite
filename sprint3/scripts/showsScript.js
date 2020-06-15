@@ -7,10 +7,10 @@ const getShows = () => {
     axios.get('https://project-1-api.herokuapp.com/showdates'+myKey)
         .then(res => {
             console.log(res);
-            for(let i=0; i<res.data.length;i++){
-                let param = res.data[i]
-                parseShows(param)
-            }
+            let param = res.data;
+            param.forEach(element => {
+                parseShows(element); 
+            });
         })    
 }
 getShows();

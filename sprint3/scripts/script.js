@@ -20,11 +20,11 @@ const getComments = () => {
     container.innerHTML = ""; 
     axios.get('https://project-1-api.herokuapp.com/comments'+myKey2)
         .then(response => {
-            for(let i=0; i<response.data.length;i++){
-                let param = response.data[i]
-                commentArray.push(param)      
-                parseComments(param)          
-            }          
+            let param = response.data;
+            param.forEach(element => {
+                commentArray.push(element);
+                parseComments(element);
+            });        
         })
 }
 getComments()
