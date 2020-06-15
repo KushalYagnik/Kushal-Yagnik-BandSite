@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../scss/main.css">
 </head>
 <body>
+    <!-- TOP NAV BAR -->
     <header class="header">
         <a href="../index.html" class="logo-wrapper">
             <img class="logo" src="../assets/logo/Logo-bandsite-NEW.svg" alt="bandsite-logo">
@@ -26,25 +27,30 @@
         </nav>
     </header>
     <main class="main__shows">
+        <!-- HERO SECTION -->
         <div class="showshero">
             <h3 class="showshero__albumheader">Woman Worldwide Album</h3>
             <h1 class="showshero__heading">Waters of Nazareth x We Are your Friends x Phantom</h1>
-            <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/momomoyouth" title="MØ" target="_blank" style="color: #cccccc; text-decoration: none;">MØ</a> · <a href="https://soundcloud.com/momomoyouth/blur-feat-foster-the-people" title="Blur (feat. Foster The People)" target="_blank" style="color: #cccccc; text-decoration: none;">Blur (feat. Foster The People)</a></div>
+            <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
         </div>
+        <!-- SHOW DETAILS CONTAINER -->
         <div class="shows">
             <h2 class="shows__heading heading">Shows</h2>
             <div class="shows__header">
+                <!-- SHOWS TABLE HEADER FOR LARGE SCREENS....DISABLED FOR MOBILE -->
                 <ul class="shows__header-list">
-                    <li class="shows__header-item">Date</li>
-                    <li class="shows__header-item">Venue</li>
-                    <li class="shows__header-item">Location</li>
+                    <li class="shows__header-item lbl-row">Dates</li>
+                    <li class="shows__header-item lbl-row">Venue</li>
+                    <li class="shows__header-item lbl-row">Location</li>
                 </ul>
             </div>
             <div class="shows__container">
-    
+                <!-- API SHOWS LIST PARSED HERE -->
             </div>
         </div>        
     </main>
+    <!-- BOTTOM NAV BLOCK -->
     <footer class="footer">
         <div class="social">
             <h2 class="social__heading heading">Get In Touch</h2>
@@ -76,6 +82,7 @@
             <p class="legal__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</p>
         </div>
     </footer>
+    <!-- SCRIPT PATHS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="../scripts/showsScript.js"></script>
 </body>

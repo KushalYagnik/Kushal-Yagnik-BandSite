@@ -1,6 +1,8 @@
 const myKey2 = "?api_key=a6ece6ac-e3b8-4849-a699-f9497aa4991e";
 const myKey = '?api_key=226c5472-44d6-4e27-afb5-4070724aba91';
 
+
+//HTTP GET REQUEST
 const getShows = () => {
     axios.get('https://project-1-api.herokuapp.com/showdates'+myKey)
         .then(res => {
@@ -8,7 +10,6 @@ const getShows = () => {
             for(let i=0; i<res.data.length;i++){
                 let param = res.data[i]
                 parseShows(param)
-                // console.log(param.place);
             }
         })    
 }
@@ -16,10 +17,9 @@ getShows();
 
 const parseShows = (param) => {
     let container = document.querySelector('.shows__container');
-
+//SHOWS UNIT
     let showsUnit = document.createElement('div');
     showsUnit.className = 'shows__unit';
-
 
     let label1 = document.createElement('label');
     label1.className = 'shows__date-label lbl';

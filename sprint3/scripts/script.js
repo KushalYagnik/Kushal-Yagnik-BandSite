@@ -1,3 +1,4 @@
+// GET API KEY
 const getKey = () => {
     axios.get('https://project-1-api.herokuapp.com/register')
         .then(res => {
@@ -10,44 +11,41 @@ const myKey = '?api_key=226c5472-44d6-4e27-afb5-4070724aba91';
 
 const container = document.querySelector('.comments__container');
 
+// DECLARE EMPTY ARRAY FOR COMMENTS
 let commentArray = [];
 
-// Get APi comments
+// HTTP GET REQUEST
 const getComments = () => {
-    container.innerHTML = "";
+//EMPTY THE CONTAINER BY DEFAULT TO AVOID DUPLICATING COMMENTS    
+    container.innerHTML = ""; 
     axios.get('https://project-1-api.herokuapp.com/comments'+myKey2)
         .then(response => {
-            // console.log(response)
-            // console.log(response.data[0])
             for(let i=0; i<response.data.length;i++){
                 let param = response.data[i]
                 commentArray.push(param)      
                 parseComments(param)          
-            }
-            // console.log(commentArray)
-            // console.log(commentArray[0].comment)
-            
+            }          
         })
 }
 getComments()
 
 
-// Show API comments on page load
+// PARSE API COMMENTS TO CONTAINER
+
 const parseComments = (param) => {
-    let commentsUnit = document.createElement('div');
+//COMMENTS UNIT    
+    let commentsUnit = document.createElement('div'); 
     commentsUnit.className = 'comments__unit';
-    
-    
+//PROFILE PIC CONTAINER    
     let picWrapper = document.createElement('div');
     picWrapper.className = 'comments__pic-wrapper';
     commentsUnit.appendChild(picWrapper);
 
     let pic = document.createElement('img');
-    // pic.setAttribute('src',param.image);
     pic.className = 'comments__pic';
     picWrapper.appendChild(pic);
-
-    let block = document.createElement('div');
+//NAME, COMMENTS, DATE CONTAINER
+    let block = document.createElement('div'); 
     block.className= 'comments__block';
     commentsUnit.appendChild(block);
     
@@ -70,7 +68,7 @@ const parseComments = (param) => {
     comment.className = 'comments__comment';
     comment.innerText = `${param.comment}`;
     block.appendChild(comment);
-
+//COMMENT HANDLES CONTAINER
     let commentHandles = document.createElement('div');
     commentHandles.className = 'comments__handles'
     block.appendChild(commentHandles);
@@ -78,30 +76,27 @@ const parseComments = (param) => {
     let del = document.createElement('button');
     del.className = 'comments__delete';
     del.setAttribute('value',param.id);
-    del.innerText = 'Delete';
+    del.innerText = 'Remove';
     commentHandles.appendChild(del);
-    // commentsUnit.appendChild(del);
 
     let like = document.createElement('button');
     like.className = 'comments__like  fa fa-thumbs-up';
     like.setAttribute('value',param.id);
-    // like.innerText = '  Like';
     commentHandles.appendChild(like);
 
     let likes = document.createElement('p');
     likes.className = 'comments__counter';
     likes.innerText = `${param.likes}`;
     commentHandles.appendChild(likes);
-    
-
+//PREPEND TO CONTAINER TO DISPLAY NEW COMMENTS ON TOP    
     container.prepend(commentsUnit);
-
+//DELETE COMMENT
     const delComment = document.querySelector('.comments__delete');
     delComment.addEventListener('click', function(event) {
         console.log(event.toElement.value);
         confirmDel();
     });
-
+//HTTP PUT REQUEST
     const likeComment = document.querySelector('.comments__like');
     likeComment.addEventListener('click', function(event) {
         console.log(event.toElement.value);
@@ -111,37 +106,30 @@ const parseComments = (param) => {
             })
     });
 }
-
-
-
-// Get form comments
-
+//GET FORM DATA
 const form = document.querySelector('.form');
 form.addEventListener('submit',function(event){
     event.preventDefault();
     let fName = document.querySelector('.form__name').value;
-    // console.log(fName);
     let fComm = document.querySelector('.form__comment').value;
-    // console.log(fComm)
+//PREVENT FORM SUBMISSION IF FIELDS ARE EMPTY
+//HTTP POST REQUEST
     if(fName && fComm){
         axios.post('https://project-1-api.herokuapp.com/comments'+myKey2,{
             name: `${fName}`,
             comment: `${fComm}`
         })
             .then(response => {
-                // console.log(response);
                 form.reset();
                 parseComments(response.data);
-                // location.reload();
             })        
     }
     else{
         alert("Please fill the form before submitting!")
     }
-    
 })
-
-
+//HTTP DELETE REQUEST
+//PREVENT ACCIDENTAL COMMENT DELETION
 const confirmDel = () => {
     let res = confirm("Are you sure you want to delete this comment?");
     if (res == true) {

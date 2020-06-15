@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- TOP NAV BAR -->
     <header class="header">
         <a href="./index.html" class="logo-wrapper">
             <img class="logo" src="./assets/logo/Logo-bandsite-NEW.svg" alt="bandsite-logo">
@@ -27,9 +28,11 @@
         </nav>
     </header>
     <main class="main">
+        <!-- HERO SECTION -->
         <div class="hero">
             <h1 class="hero__heading">Gaspard Auge & Xavier de Rosnay</h1>
         </div>
+        <!-- ABOUT CONTAINER -->
         <section class="about">
             <h2 class="about__heading heading">About the Musicians</h2>
             <div class="about__wrapper">
@@ -62,6 +65,7 @@
                 </div>
             </div>
         </section>
+        <!-- IMAGE GALLERY -->
         <div class="gallery">
             <h2 class="gallery__heading heading">Photo Gallery</h2>
             <figure class="gallery__album">
@@ -76,8 +80,10 @@
                 <img class="gallery__photo" src="./assets/images/Photo-gallery-9.jpg" alt="gallery-img-9">
             </figure>
         </div>
+        <!-- COMMENTS SECTION -->
         <div class="comments">
             <h2 class="comments__heading heading">Join the Conversation</h2>
+            <!-- COMMENTS FORM -->
             <form action="" class="form">
                 <div class="form__img-wrapper">
                     <img class="form__pic" src="./assets/images/Mohan-muruge.jpg" alt="">
@@ -89,18 +95,18 @@
                     </div>
                     <div class="form__comment-wrapper">
                         <label for="form__comment" class="form__lbl lbl">Comment</label>
-                        <textarea class="form__comment" id="" cols="30" rows="10" placeholder="Add a new comment"></textarea>
+                        <textarea class="form__comment" cols=10 rows="5" placeholder="Add a new comment"></textarea>
                     </div>
                     <button class="form__submit btn">Comment</button>
                 </div>
                 
             </form>
             <div class="comments__container">
-                
+                <!-- API COMMENTS PARSED HERE -->
             </div>
         </div>
-        
     </main>
+    <!-- BOTTOM NAV BLOCK -->
     <footer class="footer">
         <div class="social">
             <h2 class="social__heading heading">Get In Touch</h2>
@@ -132,6 +138,7 @@
             <p class="legal__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</p>
         </div>
     </footer>
+    <!-- SCRIPT PATHS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
