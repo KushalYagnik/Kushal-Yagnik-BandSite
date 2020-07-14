@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'myfont';
+  src: url("../assets/_globalfont/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: myfont-bold;
+  src: url("../assets/_globalfont/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: myfont-demi-bold;
+  src: url("../assets/_globalfont/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: myfont;
+  color: #323232;
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.heading {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: myfont-bold;
+}
+
+header {
+  height: 80px;
+  padding: 0px 180px;
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .active {
+  padding-bottom: 27px;
+  border-bottom: 5px solid white;
+}
+
+header .navmenu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+header .navmenu__item {
+  margin-left: 56px;
+  width: 80px;
+  margin-right: 1.5em;
+}
+
+header .navmenu__link {
+  color: white;
+  text-decoration: none;
+}
+
+main .hero {
+  background-image: url(../assets/hero/photo-1568781269551-3e3baf5ec909.jpg);
+  background-size: cover;
+  height: 670px;
+  width: 100%;
+}
+
+main .hero__heading {
+  font-family: myfont-bold;
+  position: relative;
+  width: 600px;
+  font-size: 60px;
+  line-height: 68px;
+  color: white;
+  top: 235px;
+  left: 200px;
+}
+
+main .about {
+  padding: 48px 272px;
+}
+
+main .about__heading {
+  position: relative;
+  right: 90px;
+}
+
+main .about__banner {
+  width: 896px;
+  height: 450px;
+  margin: 48px auto;
+}
+
+main .about__slogan {
+  font-family: myfont-bold;
+  font-size: 24px;
+  line-height: 32px;
+  width: 800px;
+}
+
+main .about__slogan--author {
+  display: inline-block;
+  font-family: myfont-demi-bold;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 40px;
+}
+
+main .about__artists {
+  margin-top: 56px;
+  font-family: myfont-bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+main .about__textarea {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .about__text {
+  margin-right: 40px;
+  width: 420px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+main .gallery {
+  padding: 48px 180px 40px 180px;
+  background-color: #FAFAFA;
+}
+
+main .gallery__album {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .gallery__photo {
+  width: 344px;
+  height: 193px;
+  padding-top: 44px;
+}
+
+footer {
+  background-color: #323232;
+  color: white;
+  padding: 48px 180px;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social__icon {
+  margin-left: 32px;
+}
+
+footer .social__icon--right {
+  padding-left: 600px;
+  width: 120px;
+  height: 24px;
+}
+
+footer .contact {
+  padding: 56px 0 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer .contact__details {
+  margin-right: 100px;
+}
+
+footer .contact__person {
+  padding-bottom: 24px;
+}
+
+footer .contact__address {
+  padding-bottom: 24px;
+}
+/*# sourceMappingURL=main.css.map */
